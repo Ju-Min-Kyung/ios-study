@@ -11,5 +11,5 @@ struct Alarm{
     
     var isOn : Bool
     var isAm : Bool
-    var clock : String
+    var clock : Date
 }

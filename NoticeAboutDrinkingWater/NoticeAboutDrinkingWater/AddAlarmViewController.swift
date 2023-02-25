@@ -10,7 +10,7 @@ import UIKit
 
 
 protocol AlarmInformationDelegate {
-    func sendInformation(isAm : Bool, clock : String)
+    func sendInformation(clock : Date)
 }
 
 class AddAlarmViewController: UIViewController{
@@ -18,37 +18,19 @@ class AddAlarmViewController: UIViewController{
     @IBOutlet weak var datePicker: UIDatePicker!
 
     var delegate : AlarmInformationDelegate?
-    var isAm : Bool?
-    var clock : String?
+    var clock : Date?
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    func changeDatepickerToString(date : Date) -> String {
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "HH:MM"
-        dateFormatter.locale = Locale(identifier: "ko_KR")
-        return dateFormatter.string(from: date)
-        
-    }
-    
-    func isAmPm(date  : Date) -> Bool {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "aa"
-        dateFormatter.locale = Locale(identifier: "Ko_KR")
-        
-        return dateFormatter.string(from: date) == "오전" ? true : false
-        
-    }
+
 
     @IBAction func setAlarm(_ sender: Any) {
         
-        isAm = isAmPm(date: datePicker.date)
-        clock = changeDatepickerToString(date: datePicker.date)
+        clock = datePicker.date
         
-        delegate?.sendInformation(isAm: isAm ?? true, clock: clock ?? "")
+        delegate?.sendInformation(clock: clock! )
 
         self.dismiss(animated: true)
         

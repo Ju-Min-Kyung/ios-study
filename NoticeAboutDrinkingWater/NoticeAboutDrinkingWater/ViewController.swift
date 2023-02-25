@@ -11,13 +11,19 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var alarmList : [Alarm] = []
+    var alarmList = [Alarm](){
+        didSet {
+            self.saveAlarmList()
+        }
+    }
     var isAm : Bool?
     var clock : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        loadAlaramList()
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -34,16 +40,68 @@ class ViewController: UIViewController {
         }
     }
     
+    //using Userdefaults
+    func saveAlarmList(){
+        let time = self.alarmList.map{
+            [
+                "isOn" : $0.isOn,
+                "isAm" : $0.isAm,
+                "clock" : $0.clock
+            
+            ]
+        }
+        
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(time, forKey: "alarmList")
+    }
+    func loadAlaramList(){
+        
+        let userDefaults = UserDefaults.standard
+        
+        guard let data = userDefaults.object(forKey: "alarmList") as? [[String: Any]] else {return}
+        self.alarmList = data.compactMap {
+            guard let isOn = $0["isOn"] as? Bool else {return nil}
+            guard let isAm = $0["isAm"] as? Bool else {return nil }
+            guard let clock = $0["clock"] as? Date else {return nil}
+            return Alarm(isOn: isOn, isAm: isAm, clock: clock)
+        }
+        
+        
+        self.alarmList = self.alarmList.sorted(by: {
+            $0.clock.compare($1.clock) == .orderedAscending
+        })
+    }
+    
+    
+    // DateFormatter
+    func changeDatepickerToString(date : Date) -> String {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "hh:mm"
+        dateFormatter.locale = Locale(identifier: "ko_KR")
+        return dateFormatter.string(from: date)
+        
+    }
+    
+    func isAmPm(date  : Date) -> Bool {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "aa"
+        dateFormatter.locale = Locale(identifier: "Ko_KR")
+        
+        return dateFormatter.string(from: date) == "오전" ? true : false
+        
+    }
     
 
 
 }
 
 extension ViewController : AlarmInformationDelegate{
-    func sendInformation(isAm: Bool, clock: String) {
-        self.isAm = isAm
-        self.clock = clock
-        
+    func sendInformation(clock: Date) {
+
+        self.isAm = isAmPm(date: clock)
+        alarmList.append(Alarm(isOn: true, isAm: isAm ?? false, clock: clock ))
+        tableView.reloadData()
     }
 }
 
@@ -59,8 +117,10 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
             
         }
         
+        cell.AmPmLabel.text = alarmList[indexPath.row].isAm == true ? "오전" : "오후"
+        cell.alarmClockLabel.text = changeDatepickerToString(date: alarmList[indexPath.row].clock )
         
-        tableView.reloadData()
+        
         return cell
     }
     
@@ -78,5 +138,3 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
     
     
 }
-
-
