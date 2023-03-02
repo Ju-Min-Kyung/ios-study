@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     func saveAlarmList(){
         let time = self.alarmList.map{
             [
-                "isOn" : $0.isOn,
+                "id" : $0.id,
                 "isAm" : $0.isAm,
                 "clock" : $0.clock
             
@@ -60,10 +60,10 @@ class ViewController: UIViewController {
         
         guard let data = userDefaults.object(forKey: "alarmList") as? [[String: Any]] else {return}
         self.alarmList = data.compactMap {
-            guard let isOn = $0["isOn"] as? Bool else {return nil}
+            guard let id = $0["id"] as? String else {return nil}
             guard let isAm = $0["isAm"] as? Bool else {return nil }
             guard let clock = $0["clock"] as? Date else {return nil}
-            return Alarm(isOn: isOn, isAm: isAm, clock: clock)
+            return Alarm(id: id, isAm: isAm, clock: clock)
         }
         
         
@@ -72,6 +72,45 @@ class ViewController: UIViewController {
         })
     }
     
+    //local notificaiton
+    
+    func sendNotification(hour : Int, minute : Int, id : String){
+        
+
+        let content = UNMutableNotificationContent()
+        content.title = "물 마실 시간입니다!"
+        content.body = "물 마실 시간이 다 됬어요~ 하루에 물을 2L 이상 마시면 혈액순환과 피부에 많은 도움이 됩니다!"
+        
+        var dateComponents = DateComponents()
+        dateComponents.calendar = Calendar.current
+
+        dateComponents.weekday = .max
+        dateComponents.hour = hour
+        dateComponents.minute = minute
+        
+    
+        // Create the trigger as a repeating event.
+        let trigger = UNCalendarNotificationTrigger(
+                 dateMatching: dateComponents, repeats: true)
+        
+        // Create the request
+        let request = UNNotificationRequest(identifier: id,
+                    content: content, trigger: trigger)
+
+        // Schedule the request with the system.
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.add(request) { (error) in
+           if error != nil {
+              // Handle any errors.
+               
+               print("Error - Fail to request local notificaiton")
+           }
+        }
+        
+        
+        
+        
+    }
     
     // DateFormatter
     func changeDatepickerToString(date : Date) -> String {
@@ -79,6 +118,7 @@ class ViewController: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "hh:mm"
         dateFormatter.locale = Locale(identifier: "ko_KR")
+        dateFormatter.timeZone = TimeZone(identifier: "UTC")
         return dateFormatter.string(from: date)
         
     }
@@ -87,8 +127,33 @@ class ViewController: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "aa"
         dateFormatter.locale = Locale(identifier: "Ko_KR")
+        dateFormatter.timeZone = TimeZone(identifier: "UTC")
         
         return dateFormatter.string(from: date) == "오전" ? true : false
+        
+    }
+    
+    func changeDatepickerToStringForHour(date : Date) -> String {
+        
+       
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH"
+        
+        dateFormatter.locale = Locale(identifier: "ko_KR")
+        dateFormatter.timeZone = TimeZone(identifier: "UTC")
+      
+        return dateFormatter.string(from: date)
+        
+    }
+    
+    func changeDatepickerToStringForMinute(date : Date) -> String {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "mm"
+        dateFormatter.locale = Locale(identifier: "ko_KR")
+        dateFormatter.timeZone = TimeZone(identifier: "UTC")
+        
+        return dateFormatter.string(from: date)
         
     }
     
@@ -100,7 +165,13 @@ extension ViewController : AlarmInformationDelegate{
     func sendInformation(clock: Date) {
 
         self.isAm = isAmPm(date: clock)
-        alarmList.append(Alarm(isOn: true, isAm: isAm ?? false, clock: clock ))
+        let alarm = Alarm(id : UUID().uuidString, isAm: isAm ?? false, clock: clock )
+        alarmList.append(alarm)
+        let hour = Int(changeDatepickerToStringForHour(date: clock))
+        let minute = Int(changeDatepickerToStringForMinute(date: clock))
+        let id = alarm.id
+        sendNotification(hour: hour!, minute: minute!, id: id)
+
         tableView.reloadData()
     }
 }

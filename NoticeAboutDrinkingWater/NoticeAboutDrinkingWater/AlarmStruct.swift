@@ -9,7 +9,7 @@ import Foundation
 
 struct Alarm{
     
-    var isOn : Bool
+    var id : String
     var isAm : Bool
     var clock : Date
 }

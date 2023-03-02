@@ -28,9 +28,15 @@ class AddAlarmViewController: UIViewController{
 
     @IBAction func setAlarm(_ sender: Any) {
         
-        clock = datePicker.date
+      
+      
+        let date = datePicker.date
+        let timezone = TimeZone.autoupdatingCurrent
         
-        delegate?.sendInformation(clock: clock! )
+        let secondsFromGMT = timezone.secondsFromGMT(for: date)
+        let localizedDate = date.addingTimeInterval(TimeInterval(secondsFromGMT))
+        
+        delegate?.sendInformation(clock: localizedDate )
 
         self.dismiss(animated: true)
         
@@ -40,4 +46,19 @@ class AddAlarmViewController: UIViewController{
         self.dismiss(animated: true)
     }
     
+}
+
+
+extension Date {
+
+    var localizedDate : Date {
+
+        let date = Date()
+        let timezone = TimeZone.autoupdatingCurrent
+        
+        let secondsFromGMT = timezone.secondsFromGMT(for: date)
+        let localizedDate = date.addingTimeInterval(TimeInterval(secondsFromGMT))
+
+        return localizedDate;
+    }
 }
