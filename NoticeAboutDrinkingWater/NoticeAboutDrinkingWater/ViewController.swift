@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    
+    let userNotificationCenter = UNUserNotificationCenter.current()
     var alarmList = [Alarm](){
         didSet {
             self.saveAlarmList()
@@ -46,7 +46,8 @@ class ViewController: UIViewController {
             [
                 "id" : $0.id,
                 "isAm" : $0.isAm,
-                "clock" : $0.clock
+                "clock" : $0.clock,
+                "isOn" : $0.isOn
             
             ]
         }
@@ -63,7 +64,8 @@ class ViewController: UIViewController {
             guard let id = $0["id"] as? String else {return nil}
             guard let isAm = $0["isAm"] as? Bool else {return nil }
             guard let clock = $0["clock"] as? Date else {return nil}
-            return Alarm(id: id, isAm: isAm, clock: clock)
+            guard let isOn = $0["isOn"] as? Bool else {return nil}
+            return Alarm(id: id, isAm: isAm, clock: clock, isOn: isOn)
         }
         
         
@@ -98,8 +100,8 @@ class ViewController: UIViewController {
                     content: content, trigger: trigger)
 
         // Schedule the request with the system.
-        let notificationCenter = UNUserNotificationCenter.current()
-        notificationCenter.add(request) { (error) in
+        
+        userNotificationCenter.add(request) { (error) in
            if error != nil {
               // Handle any errors.
                
@@ -157,6 +159,28 @@ class ViewController: UIViewController {
         
     }
     
+    //switch toggle
+    
+    @objc func toggleSwitch(_ sender: UISwitch){
+        
+        
+        if !sender.isOn{
+            alarmList[sender.tag].isOn = false
+            UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [alarmList[sender.tag].id])
+            
+        }
+        
+        if sender.isOn{
+            alarmList[sender.tag].isOn = true
+            let hour = Int(changeDatepickerToStringForHour(date: alarmList[sender.tag].clock))
+            let minute = Int(changeDatepickerToStringForMinute(date: alarmList[sender.tag].clock))
+            let id = alarmList[sender.tag].id
+            
+            sendNotification(hour: hour!, minute: minute!, id: id)
+            
+        }
+    }
+    
 
 
 }
@@ -164,14 +188,18 @@ class ViewController: UIViewController {
 extension ViewController : AlarmInformationDelegate{
     func sendInformation(clock: Date) {
 
+        
         self.isAm = isAmPm(date: clock)
-        let alarm = Alarm(id : UUID().uuidString, isAm: isAm ?? false, clock: clock )
+        let alarm = Alarm(id : UUID().uuidString, isAm: isAm ?? false, clock: clock , isOn: true)
         alarmList.append(alarm)
         let hour = Int(changeDatepickerToStringForHour(date: clock))
         let minute = Int(changeDatepickerToStringForMinute(date: clock))
         let id = alarm.id
         sendNotification(hour: hour!, minute: minute!, id: id)
-
+        self.alarmList = self.alarmList.sorted(by: {
+            $0.clock.compare($1.clock) == .orderedAscending
+        })
+        
         tableView.reloadData()
     }
 }
@@ -191,12 +219,25 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
         cell.AmPmLabel.text = alarmList[indexPath.row].isAm == true ? "오전" : "오후"
         cell.alarmClockLabel.text = changeDatepickerToString(date: alarmList[indexPath.row].clock )
         
+        cell.onOffAlarmSwitch.addTarget(self, action: #selector(toggleSwitch(_:)), for: .allTouchEvents)
+        
+        if alarmList[indexPath.row].isOn == false{
+            cell.onOffAlarmSwitch.isOn = false
+        }
+        else{
+            cell.onOffAlarmSwitch.isOn = true
+        }
+        
+        cell.onOffAlarmSwitch.tag = indexPath.row
+        
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
+        
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [alarmList[indexPath.row].id])
         self.alarmList.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .automatic)
         
