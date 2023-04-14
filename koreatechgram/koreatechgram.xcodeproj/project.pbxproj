@@ -1,0 +1,620 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		83690EDC29D6CE1700CFA3BF /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83690EDB29D6CE1700CFA3BF /* Color.swift */; };
+		83690EDF29D70F4A00CFA3BF /* BinggraeSamanco-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83690EDE29D70F4A00CFA3BF /* BinggraeSamanco-Bold.ttf */; };
+		83690EE029D70F4A00CFA3BF /* BinggraeSamanco-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83690EDE29D70F4A00CFA3BF /* BinggraeSamanco-Bold.ttf */; };
+		83690EE129D70F4A00CFA3BF /* BinggraeSamanco-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 83690EDE29D70F4A00CFA3BF /* BinggraeSamanco-Bold.ttf */; };
+		83690EE429D710B400CFA3BF /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83690EE329D710B400CFA3BF /* Font.swift */; };
+		83690EE529D710B400CFA3BF /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83690EE329D710B400CFA3BF /* Font.swift */; };
+		83690EE629D710B400CFA3BF /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83690EE329D710B400CFA3BF /* Font.swift */; };
+		83ABAD4329CDCBE500A8D67E /* koreatechgramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ABAD4229CDCBE500A8D67E /* koreatechgramApp.swift */; };
+		83ABAD4529CDCBE500A8D67E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ABAD4429CDCBE500A8D67E /* ContentView.swift */; };
+		83ABAD4729CDCBE700A8D67E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83ABAD4629CDCBE700A8D67E /* Assets.xcassets */; };
+		83ABAD4A29CDCBE700A8D67E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83ABAD4929CDCBE700A8D67E /* Preview Assets.xcassets */; };
+		83ABAD5429CDCBE700A8D67E /* koreatechgramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ABAD5329CDCBE700A8D67E /* koreatechgramTests.swift */; };
+		83ABAD5E29CDCBE700A8D67E /* koreatechgramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ABAD5D29CDCBE700A8D67E /* koreatechgramUITests.swift */; };
+		83ABAD6029CDCBE700A8D67E /* koreatechgramUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ABAD5F29CDCBE700A8D67E /* koreatechgramUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		83ABAD5029CDCBE700A8D67E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83ABAD3729CDCBE500A8D67E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83ABAD3E29CDCBE500A8D67E;
+			remoteInfo = koreatechgram;
+		};
+		83ABAD5A29CDCBE700A8D67E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83ABAD3729CDCBE500A8D67E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83ABAD3E29CDCBE500A8D67E;
+			remoteInfo = koreatechgram;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		83690EDB29D6CE1700CFA3BF /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		83690EDE29D70F4A00CFA3BF /* BinggraeSamanco-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BinggraeSamanco-Bold.ttf"; path = "../../../../Downloads/BinggraeSamanco-Bold.ttf"; sourceTree = "<group>"; };
+		83690EE229D7101D00CFA3BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		83690EE329D710B400CFA3BF /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		83ABAD3F29CDCBE500A8D67E /* koreatechgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = koreatechgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83ABAD4229CDCBE500A8D67E /* koreatechgramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = koreatechgramApp.swift; sourceTree = "<group>"; };
+		83ABAD4429CDCBE500A8D67E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		83ABAD4629CDCBE700A8D67E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		83ABAD4929CDCBE700A8D67E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		83ABAD4F29CDCBE700A8D67E /* koreatechgramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = koreatechgramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83ABAD5329CDCBE700A8D67E /* koreatechgramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = koreatechgramTests.swift; sourceTree = "<group>"; };
+		83ABAD5929CDCBE700A8D67E /* koreatechgramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = koreatechgramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83ABAD5D29CDCBE700A8D67E /* koreatechgramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = koreatechgramUITests.swift; sourceTree = "<group>"; };
+		83ABAD5F29CDCBE700A8D67E /* koreatechgramUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = koreatechgramUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		83ABAD3C29CDCBE500A8D67E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83ABAD4C29CDCBE700A8D67E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83ABAD5629CDCBE700A8D67E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		83690EDD29D70E8F00CFA3BF /* font */ = {
+			isa = PBXGroup;
+			children = (
+				83690EDE29D70F4A00CFA3BF /* BinggraeSamanco-Bold.ttf */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
+		83ABAD3629CDCBE500A8D67E = {
+			isa = PBXGroup;
+			children = (
+				83690EDD29D70E8F00CFA3BF /* font */,
+				83ABAD4129CDCBE500A8D67E /* koreatechgram */,
+				83ABAD5229CDCBE700A8D67E /* koreatechgramTests */,
+				83ABAD5C29CDCBE700A8D67E /* koreatechgramUITests */,
+				83ABAD4029CDCBE500A8D67E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		83ABAD4029CDCBE500A8D67E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83ABAD3F29CDCBE500A8D67E /* koreatechgram.app */,
+				83ABAD4F29CDCBE700A8D67E /* koreatechgramTests.xctest */,
+				83ABAD5929CDCBE700A8D67E /* koreatechgramUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83ABAD4129CDCBE500A8D67E /* koreatechgram */ = {
+			isa = PBXGroup;
+			children = (
+				83690EE229D7101D00CFA3BF /* Info.plist */,
+				83ABAD4229CDCBE500A8D67E /* koreatechgramApp.swift */,
+				83ABAD4429CDCBE500A8D67E /* ContentView.swift */,
+				83690EDB29D6CE1700CFA3BF /* Color.swift */,
+				83690EE329D710B400CFA3BF /* Font.swift */,
+				83ABAD4629CDCBE700A8D67E /* Assets.xcassets */,
+				83ABAD4829CDCBE700A8D67E /* Preview Content */,
+			);
+			path = koreatechgram;
+			sourceTree = "<group>";
+		};
+		83ABAD4829CDCBE700A8D67E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				83ABAD4929CDCBE700A8D67E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		83ABAD5229CDCBE700A8D67E /* koreatechgramTests */ = {
+			isa = PBXGroup;
+			children = (
+				83ABAD5329CDCBE700A8D67E /* koreatechgramTests.swift */,
+			);
+			path = koreatechgramTests;
+			sourceTree = "<group>";
+		};
+		83ABAD5C29CDCBE700A8D67E /* koreatechgramUITests */ = {
+			isa = PBXGroup;
+			children = (
+				83ABAD5D29CDCBE700A8D67E /* koreatechgramUITests.swift */,
+				83ABAD5F29CDCBE700A8D67E /* koreatechgramUITestsLaunchTests.swift */,
+			);
+			path = koreatechgramUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		83ABAD3E29CDCBE500A8D67E /* koreatechgram */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83ABAD6329CDCBE700A8D67E /* Build configuration list for PBXNativeTarget "koreatechgram" */;
+			buildPhases = (
+				83ABAD3B29CDCBE500A8D67E /* Sources */,
+				83ABAD3C29CDCBE500A8D67E /* Frameworks */,
+				83ABAD3D29CDCBE500A8D67E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = koreatechgram;
+			productName = koreatechgram;
+			productReference = 83ABAD3F29CDCBE500A8D67E /* koreatechgram.app */;
+			productType = "com.apple.product-type.application";
+		};
+		83ABAD4E29CDCBE700A8D67E /* koreatechgramTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83ABAD6629CDCBE700A8D67E /* Build configuration list for PBXNativeTarget "koreatechgramTests" */;
+			buildPhases = (
+				83ABAD4B29CDCBE700A8D67E /* Sources */,
+				83ABAD4C29CDCBE700A8D67E /* Frameworks */,
+				83ABAD4D29CDCBE700A8D67E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83ABAD5129CDCBE700A8D67E /* PBXTargetDependency */,
+			);
+			name = koreatechgramTests;
+			productName = koreatechgramTests;
+			productReference = 83ABAD4F29CDCBE700A8D67E /* koreatechgramTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		83ABAD5829CDCBE700A8D67E /* koreatechgramUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83ABAD6929CDCBE700A8D67E /* Build configuration list for PBXNativeTarget "koreatechgramUITests" */;
+			buildPhases = (
+				83ABAD5529CDCBE700A8D67E /* Sources */,
+				83ABAD5629CDCBE700A8D67E /* Frameworks */,
+				83ABAD5729CDCBE700A8D67E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83ABAD5B29CDCBE700A8D67E /* PBXTargetDependency */,
+			);
+			name = koreatechgramUITests;
+			productName = koreatechgramUITests;
+			productReference = 83ABAD5929CDCBE700A8D67E /* koreatechgramUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83ABAD3729CDCBE500A8D67E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					83ABAD3E29CDCBE500A8D67E = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					83ABAD4E29CDCBE700A8D67E = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 83ABAD3E29CDCBE500A8D67E;
+					};
+					83ABAD5829CDCBE700A8D67E = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 83ABAD3E29CDCBE500A8D67E;
+					};
+				};
+			};
+			buildConfigurationList = 83ABAD3A29CDCBE500A8D67E /* Build configuration list for PBXProject "koreatechgram" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83ABAD3629CDCBE500A8D67E;
+			productRefGroup = 83ABAD4029CDCBE500A8D67E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				83ABAD3E29CDCBE500A8D67E /* koreatechgram */,
+				83ABAD4E29CDCBE700A8D67E /* koreatechgramTests */,
+				83ABAD5829CDCBE700A8D67E /* koreatechgramUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		83ABAD3D29CDCBE500A8D67E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83ABAD4A29CDCBE700A8D67E /* Preview Assets.xcassets in Resources */,
+				83690EDF29D70F4A00CFA3BF /* BinggraeSamanco-Bold.ttf in Resources */,
+				83ABAD4729CDCBE700A8D67E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83ABAD4D29CDCBE700A8D67E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83690EE029D70F4A00CFA3BF /* BinggraeSamanco-Bold.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83ABAD5729CDCBE700A8D67E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83690EE129D70F4A00CFA3BF /* BinggraeSamanco-Bold.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83ABAD3B29CDCBE500A8D67E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83690EE429D710B400CFA3BF /* Font.swift in Sources */,
+				83ABAD4529CDCBE500A8D67E /* ContentView.swift in Sources */,
+				83ABAD4329CDCBE500A8D67E /* koreatechgramApp.swift in Sources */,
+				83690EDC29D6CE1700CFA3BF /* Color.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83ABAD4B29CDCBE700A8D67E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83690EE529D710B400CFA3BF /* Font.swift in Sources */,
+				83ABAD5429CDCBE700A8D67E /* koreatechgramTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83ABAD5529CDCBE700A8D67E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83ABAD6029CDCBE700A8D67E /* koreatechgramUITestsLaunchTests.swift in Sources */,
+				83ABAD5E29CDCBE700A8D67E /* koreatechgramUITests.swift in Sources */,
+				83690EE629D710B400CFA3BF /* Font.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		83ABAD5129CDCBE700A8D67E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83ABAD3E29CDCBE500A8D67E /* koreatechgram */;
+			targetProxy = 83ABAD5029CDCBE700A8D67E /* PBXContainerItemProxy */;
+		};
+		83ABAD5B29CDCBE700A8D67E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83ABAD3E29CDCBE500A8D67E /* koreatechgram */;
+			targetProxy = 83ABAD5A29CDCBE700A8D67E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		83ABAD6129CDCBE700A8D67E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		83ABAD6229CDCBE700A8D67E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		83ABAD6429CDCBE700A8D67E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"koreatechgram/Preview Content\"";
+				DEVELOPMENT_TEAM = R4D4T62WY6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = koreatechgram/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bcsd.koreatechgram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		83ABAD6529CDCBE700A8D67E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"koreatechgram/Preview Content\"";
+				DEVELOPMENT_TEAM = R4D4T62WY6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = koreatechgram/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bcsd.koreatechgram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		83ABAD6729CDCBE700A8D67E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R4D4T62WY6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bcsd.koreatechgramTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/koreatechgram.app/koreatechgram";
+			};
+			name = Debug;
+		};
+		83ABAD6829CDCBE700A8D67E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R4D4T62WY6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bcsd.koreatechgramTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/koreatechgram.app/koreatechgram";
+			};
+			name = Release;
+		};
+		83ABAD6A29CDCBE700A8D67E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R4D4T62WY6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bcsd.koreatechgramUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = koreatechgram;
+			};
+			name = Debug;
+		};
+		83ABAD6B29CDCBE700A8D67E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R4D4T62WY6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bcsd.koreatechgramUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = koreatechgram;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83ABAD3A29CDCBE500A8D67E /* Build configuration list for PBXProject "koreatechgram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83ABAD6129CDCBE700A8D67E /* Debug */,
+				83ABAD6229CDCBE700A8D67E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83ABAD6329CDCBE700A8D67E /* Build configuration list for PBXNativeTarget "koreatechgram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83ABAD6429CDCBE700A8D67E /* Debug */,
+				83ABAD6529CDCBE700A8D67E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83ABAD6629CDCBE700A8D67E /* Build configuration list for PBXNativeTarget "koreatechgramTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83ABAD6729CDCBE700A8D67E /* Debug */,
+				83ABAD6829CDCBE700A8D67E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83ABAD6929CDCBE700A8D67E /* Build configuration list for PBXNativeTarget "koreatechgramUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83ABAD6A29CDCBE700A8D67E /* Debug */,
+				83ABAD6B29CDCBE700A8D67E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83ABAD3729CDCBE500A8D67E /* Project object */;
+}
