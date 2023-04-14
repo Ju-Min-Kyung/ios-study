@@ -21,6 +21,7 @@
 		83ABAD5429CDCBE700A8D67E /* koreatechgramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ABAD5329CDCBE700A8D67E /* koreatechgramTests.swift */; };
 		83ABAD5E29CDCBE700A8D67E /* koreatechgramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ABAD5D29CDCBE700A8D67E /* koreatechgramUITests.swift */; };
 		83ABAD6029CDCBE700A8D67E /* koreatechgramUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ABAD5F29CDCBE700A8D67E /* koreatechgramUITestsLaunchTests.swift */; };
+		83F4BFCD29E9812C00AA7512 /* ContentsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F4BFCC29E9812C00AA7512 /* ContentsItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		83ABAD5929CDCBE700A8D67E /* koreatechgramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = koreatechgramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83ABAD5D29CDCBE700A8D67E /* koreatechgramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = koreatechgramUITests.swift; sourceTree = "<group>"; };
 		83ABAD5F29CDCBE700A8D67E /* koreatechgramUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = koreatechgramUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		83F4BFCC29E9812C00AA7512 /* ContentsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				83690EE329D710B400CFA3BF /* Font.swift */,
 				83ABAD4629CDCBE700A8D67E /* Assets.xcassets */,
 				83ABAD4829CDCBE700A8D67E /* Preview Content */,
+				83F4BFCC29E9812C00AA7512 /* ContentsItem.swift */,
 			);
 			path = koreatechgram;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83690EE429D710B400CFA3BF /* Font.swift in Sources */,
+				83F4BFCD29E9812C00AA7512 /* ContentsItem.swift in Sources */,
 				83ABAD4529CDCBE500A8D67E /* ContentView.swift in Sources */,
 				83ABAD4329CDCBE500A8D67E /* koreatechgramApp.swift in Sources */,
 				83690EDC29D6CE1700CFA3BF /* Color.swift in Sources */,
